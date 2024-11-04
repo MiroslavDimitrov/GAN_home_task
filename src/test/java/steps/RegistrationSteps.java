@@ -32,8 +32,8 @@ public class RegistrationSteps {
         driver.manage().window().fullscreen(); //browser goes to full screen
     }
 
-    @When("the suer is on the home page")
-    public void theSuerIsOnTheHomePage() {
+    @When("the suer is on the registration page")
+    public void theSuerIsOnTheRegistrationPage() {
         driver.get(Locators.URL);
     }
 
@@ -143,5 +143,9 @@ public class RegistrationSteps {
         element = driver.findElement(By.cssSelector(Locators.TERMS_AND_CONDITIONS_CHECK));
         message = element.getText();
         Assert.assertEquals(message, Locators.EXPECTED_MESSAGE);
+    }
+
+    @And("the confirms the password with the same {} value")
+    public void theConfirmsThePasswordWithTheSameValue(String arg0) {
     }
 }
