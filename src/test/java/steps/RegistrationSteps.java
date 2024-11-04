@@ -82,4 +82,9 @@ public class RegistrationSteps {
         element.click();
         element.sendKeys(TextInputs.PHONE_INPUT_NUMBER);
     }
+
+    @And("the user fills in details in the Address details section")
+    public void theUserFillsInDetailsInTheAddressDetailsSection() {
+
+    }
 }
