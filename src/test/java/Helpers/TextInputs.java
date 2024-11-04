@@ -12,5 +12,6 @@ public class TextInputs {
     public static final String PHONE_INPUT_NUMBER = "0123456789";
     public static final String USER_ADDRESS = "test_address";
     public static final String USER_CITY_INPUT = "testCity";
-    public static final String USER_COUNTRY_INPUT = "testCountry";
+    public static final String USER_COUNTY_INPUT = "testCounty";
+    public static final String USER_POST_CODE_INPUT = "123456";
 }

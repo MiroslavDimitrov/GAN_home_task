@@ -114,12 +114,20 @@ public class RegistrationSteps {
         element.click();
         element.sendKeys(TextInputs.USER_CITY_INPUT);
 
-        //country
-        element = driver.findElement(By.cssSelector(TextFieldsLocators.COUNTRY_FIELD));
+        //county
+        element = driver.findElement(By.cssSelector(TextFieldsLocators.COUNTY_FIELD));
         element.click();
-        element.sendKeys(TextInputs.USER_COUNTRY_INPUT);
+        element.sendKeys(TextInputs.USER_COUNTY_INPUT);
+
+        //postal code
+        element = driver.findElement(By.cssSelector(TextFieldsLocators.POSTAL_CODE_FIELD));
+        element.click();
+        element.sendKeys(TextInputs.USER_POST_CODE_INPUT);
+
+        //country
+        element = driver.findElement(By.id(DropDownMenus.COUNTRY_DROP_DOWN));
+        element.click();
+        element = driver.findElement(By.cssSelector(DropDownMenus.COUNTRY_SELECTION));
+        element.click();
     }
-
-
 }
-

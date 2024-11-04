@@ -14,4 +14,6 @@ public class DropDownMenus {
     public static final String DATE_MONTH = "//*[@id='dobMonth']/option[12]";
     public static final String DATE_YEAR_OF_BIRTH = "dobYear";
     public static final String DATE_YEAR = "//*[@id='dobYear']/option[16]";
+    public static final String COUNTRY_DROP_DOWN = "countryList";
+    public static final String COUNTRY_SELECTION = "option[value='AO']";
 }
