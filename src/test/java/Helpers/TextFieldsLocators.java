@@ -13,4 +13,6 @@ public class TextFieldsLocators {
     public static final String PHONE_FIELD = "input[name='map(phone)'].required.telephoneNumber";
     public static final String MOBILE_PHONE_FIELD = "input[name='map(mobile)'].required.mobileNumber";
     public static final String ADDRESS_LINE_ONE = "input[name='map(address1)'].full.required";
+    public static final String CITY_TEXT_FIELD = "input[name='map(addressCity)'].required";
+    public static final String COUNTRY_FIELD = "input[name='map(stateProv)'].required";
 }

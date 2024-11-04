@@ -10,5 +10,7 @@ public class TextInputs {
     public static final String USER_LAST_NAME_FIELD = "UserLastName";
     public static final String USER_MAIL = "test_user_mail@gmail.com";
     public static final String PHONE_INPUT_NUMBER = "0123456789";
-    public static final String USER_ADDRESS = "Sofia, j.k. Mladost";
+    public static final String USER_ADDRESS = "test_address";
+    public static final String USER_CITY_INPUT = "testCity";
+    public static final String USER_COUNTRY_INPUT = "testCountry";
 }

@@ -6,11 +6,13 @@ import Helpers.TextFieldsLocators;
 import Helpers.TextInputs;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 
 /**
  * This class contains all the fields
@@ -21,10 +23,10 @@ public class RegistrationSteps {
 
     WebDriver driver;
     WebElement element;
+    private String title;
 
     @Before("@Test")
     public void setUp() {
-
         driver = new FirefoxDriver();
         driver.manage().window().fullscreen(); //browser goes to full screen
     }
@@ -32,8 +34,20 @@ public class RegistrationSteps {
     @When("the suer is on the home page")
     public void theSuerIsOnTheHomePage() {
         driver.get(Locators.URL);
+    }
+
+    @When("user clicks on the Join now button")
+    public void userClicksOnTheJoinNowButton() {
         element = driver.findElement(By.xpath(Locators.LOGIN_BTN));
         element.click();
+    }
+
+    //if this assert fail, the test will fail
+    @Then("user verifies that he is on the homepage")
+    public void userVerifiesThatHeIsOnTheHomepage() {
+        driver.get(Locators.REGISTRATION_PAGE);
+        title = driver.getTitle();
+        Assert.assertEquals(title, Locators.REGISTRATION_PAGE_TITLE);
     }
 
     @And("the user fills in details in the About you section")
@@ -94,6 +108,18 @@ public class RegistrationSteps {
         element = driver.findElement(By.cssSelector(TextFieldsLocators.ADDRESS_LINE_ONE));
         element.click();
         element.sendKeys(TextInputs.USER_ADDRESS);
+
+        //city
+        element = driver.findElement(By.cssSelector(TextFieldsLocators.CITY_TEXT_FIELD));
+        element.click();
+        element.sendKeys(TextInputs.USER_CITY_INPUT);
+
+        //country
+        element = driver.findElement(By.cssSelector(TextFieldsLocators.COUNTRY_FIELD));
+        element.click();
+        element.sendKeys(TextInputs.USER_COUNTRY_INPUT);
     }
+
+
 }
 
