@@ -24,6 +24,7 @@ public class RegistrationSteps {
     WebDriver driver;
     WebElement element;
     private String title;
+    private String message;
 
     @Before("@Test")
     public void setUp() {
@@ -129,5 +130,18 @@ public class RegistrationSteps {
         element.click();
         element = driver.findElement(By.cssSelector(DropDownMenus.COUNTRY_SELECTION));
         element.click();
+    }
+
+    @And("the user clicks on the Join button")
+    public void theUserClicksOnTheJoinButton() {
+        element = driver.findElement(By.id(Locators.JOIN_NOW_BUTTON));
+        element.click();
+    }
+
+    @Then("the user verify the unmarked terms and conditions")
+    public void theUserVerifyTheUnmarkedTermsAndConditions() {
+        element = driver.findElement(By.cssSelector(Locators.TERMS_AND_CONDITIONS_CHECK));
+        message = element.getText();
+        Assert.assertEquals(message, Locators.EXPECTED_MESSAGE);
     }
 }

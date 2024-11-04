@@ -16,4 +16,5 @@ public class TextFieldsLocators {
     public static final String CITY_TEXT_FIELD = "input[name='map(addressCity)'].required";
     public static final String COUNTY_FIELD = "input[name='map(stateProv)'].required";
     public static final String POSTAL_CODE_FIELD = "input[name='map(postCode)'].required";
+    public static final String USER_NAME_FIELD = "input[name='map(userName)'].required";
 }

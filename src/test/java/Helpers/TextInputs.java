@@ -14,4 +14,5 @@ public class TextInputs {
     public static final String USER_CITY_INPUT = "testCity";
     public static final String USER_COUNTY_INPUT = "testCounty";
     public static final String USER_POST_CODE_INPUT = "123456";
+    public static final String USER_NAME_TEXT = "testUser";
 }
