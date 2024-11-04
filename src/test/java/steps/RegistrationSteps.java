@@ -27,6 +27,8 @@ public class RegistrationSteps {
     @When("the suer is on the home page")
     public void theSuerIsOnTheHomePage() {
         driver.get(Locators.URL);
+        element = driver.findElement(By.xpath(Locators.LOGIN_BTN));
+        element.click();
     }
 
     @And("the user fills in details in the About you section")
