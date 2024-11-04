@@ -12,6 +12,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+/**
+ * This class contains all the fields
+ * that are needed to be completed a new user registration
+ */
+
 public class RegistrationSteps {
 
     WebDriver driver;
@@ -85,6 +90,10 @@ public class RegistrationSteps {
 
     @And("the user fills in details in the Address details section")
     public void theUserFillsInDetailsInTheAddressDetailsSection() {
-
+        //address line 1
+        element = driver.findElement(By.cssSelector(TextFieldsLocators.ADDRESS_LINE_ONE));
+        element.click();
+        element.sendKeys(TextInputs.USER_ADDRESS);
     }
 }
+

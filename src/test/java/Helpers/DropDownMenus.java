@@ -1,5 +1,10 @@
 package Helpers;
 
+/**
+ * This class contains all locators for the drop-down menus.
+ *
+ */
+
 public class DropDownMenus {
     public static final String ABOUT_YOU_TITLE = "title";
     public static final String ABOUT_YOU_TITLE_VALUE = "//*[@id=\"title\"]/option[2]";
