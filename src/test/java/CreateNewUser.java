@@ -13,4 +13,6 @@ public class CreateNewUser {
         driver = new FirefoxDriver();
         driver.manage().window().fullscreen(); //browser goes to full screen
     }
+
+
 }
