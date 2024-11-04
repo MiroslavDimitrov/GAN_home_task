@@ -71,5 +71,10 @@ public class RegistrationSteps {
         element = driver.findElement(By.cssSelector(TextFieldsLocators.EMAIL_FIELD));
         element.click();
         element.sendKeys(TextInputs.USER_MAIL);
+
+        //phone text field
+        element = driver.findElement(By.cssSelector(TextFieldsLocators.PHONE_FIELD));
+        element.click();
+        element.sendKeys(TextInputs.PHONE_INPUT_NUMBER);
     }
 }
