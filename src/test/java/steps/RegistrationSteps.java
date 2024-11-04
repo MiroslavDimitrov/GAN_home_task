@@ -76,5 +76,10 @@ public class RegistrationSteps {
         element = driver.findElement(By.cssSelector(TextFieldsLocators.PHONE_FIELD));
         element.click();
         element.sendKeys(TextInputs.PHONE_INPUT_NUMBER);
+
+        //mobile phone
+        element = driver.findElement(By.cssSelector(TextFieldsLocators.MOBILE_PHONE_FIELD));
+        element.click();
+        element.sendKeys(TextInputs.PHONE_INPUT_NUMBER);
     }
 }
